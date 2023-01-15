@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> myList = Arrays.asList(10, 23, 45, 567, 342, 3, 2);
 
-        System.out.println("The output list is:");
+        System.out.println("The output list is: ");
         System.out.println(returnLettersAndNumbers(myList));
 
     }
