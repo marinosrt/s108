@@ -3,6 +3,7 @@ package n1exercici1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -18,11 +19,9 @@ public class Main {
     public static List<String> FindO (List<String> myList){
         List<String> ListO = new ArrayList<>();
 
-        myList.forEach(word -> {
-            if(word.toLowerCase().contains("o")){
-                ListO.add(word);
-            }
-        });
+        ListO = myList.stream()
+                .filter(str -> str.toLowerCase().contains("o"))
+                .collect(Collectors.toList());
 
         return ListO;
     }
